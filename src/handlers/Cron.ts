@@ -48,7 +48,7 @@ module.exports = async (client: Client) => {
       const imageUrl = `https://www.cubecobra.com/cube/samplepackimage/${cube.id}/${randomInt}.png`;
 
       await channel.send({
-        content: `**Fetcher Bee sends a Gift**\n**[${cube.setCode}] ${key}** - ${cube.description}\n${imageUrl}`,
+        content: `**Fetcher Bee sends a Gift**\n**[[${cube.setCode}] ${key}](<https://www.cubecobra.com/cube/overview/${cube.id}>)** - ${cube.description}\n${imageUrl}`,
       });
 
       logger.info(`Posted hourly rp1p1 for ${key} to channel ${channelId}`);
