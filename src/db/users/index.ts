@@ -1,6 +1,7 @@
 import Keyv from 'keyv';
 import { UserRole } from 'src/lib/config/config';
 import { logger } from 'src/lib/logger';
+import { CubeSelectionHistory } from 'typings/cube';
 
 export type UserInfo = {
   discordId: string;
@@ -32,6 +33,10 @@ export const userCountDB = new Keyv(
   'sqlite://src/db/users/user_commands.sqlite',
 );
 
+// Cube selection tracking databases
+export const cubeHistoryDB = new Keyv<CubeSelectionHistory>('sqlite://src/db/users/cube_history.sqlite');
+export const cubeIndexDB = new Keyv<string[]>('sqlite://src/db/users/cube_index.sqlite'); // Stores array of selection IDs per cube
+
 users.on('error', (err) => logger.error('Keyv connection error:', err));
 discordMods.on('error', (err) => logger.error('Keyv connection error:', err));
 commandCountDB.on('error', (err) =>
@@ -39,4 +44,10 @@ commandCountDB.on('error', (err) =>
 );
 userCountDB.on('error', (err) =>
   logger.error('Keyv connection error (userCountDB):', err),
+);
+cubeHistoryDB.on('error', (err) =>
+  logger.error('Keyv connection error (cubeHistoryDB):', err),
+);
+cubeIndexDB.on('error', (err) =>
+  logger.error('Keyv connection error (cubeIndexDB):', err),
 );
