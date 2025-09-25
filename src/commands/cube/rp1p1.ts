@@ -20,7 +20,7 @@ const execute = async (interaction: ChatInputCommandInteraction) => {
   const imageUrl = `https://www.cubecobra.com/cube/samplepackimage/${cube.id}/${randomInt}.png`;
 
   await interaction.reply({
-    content: `**${key}** - ${cube.description}\n${imageUrl}`,
+    content: `**[${cube.setCode}] ${key}** - ${cube.description}\n${imageUrl}`,
   });
 };
 
