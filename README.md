@@ -137,12 +137,6 @@ export enum UserRole {
 /ping
 ```
 
-### AI Assistant (Optional)
-```typescript
-// Requires GEMINI_API_KEY in .env
-/ask question:What is TypeScript?
-```
-
 ### Interactive Help
 ```typescript
 // Shows all available commands with buttons
