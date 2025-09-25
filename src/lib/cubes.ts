@@ -5,63 +5,63 @@ import { Cube, CubeSelection, CubeSelectionHistory, CubeUsageStats } from 'typin
 export const cubes: Record<string, Cube> = {
   'Matica': {
     id: 'matica',
-    description: "Nelson's buildaround, modern-ish cube",
+    description: "Modern-ish, buildaround-ish",
     setCode: 'MTC'
   },
   'Mid': {
     id: 'mid',
-    description: "Nelson's midrange, mid card, pioneer cube",
+    description: "Pioneer mid cards we love",
     setCode: 'PMC'
   },
   'Cheapo': {
     id: 'cheapo',
-    description: "Hersh's cheapo pauper cube",
-    setCode: 'CHP'
+    description: "Cheapo Pauper",
+    setCode: 'HCC'
   },
   'Vintage': {
     id: 'Decaluwe',
-    description: "Kyle's take on the MTGO Vintage cube",
+    description: "Kyle's MODO Vintage",
     setCode: 'KVC'
   },
   'Duplicity': {
     id: 'dupli',
-    description: "Sam's artifact cube, non-singleton",
+    description: "Non-singleton artifact factory",
     setCode: 'DPC'
   },
   'Interstellar': {
     id: 'margus',
-    description: "Markus's modern no-banlist sicko cube",
+    description: "Modern no-banlist sickos",
     setCode: 'INT'
   },
   'Luka': {
     id: 'luka',
-    description: "Luka's casual, cool cards cube",
+    description: "Yeah, we're the cool guys",
     setCode: 'LKC'
   },
   'Hogwild': {
     id: 'hogwild',
-    description: "Jake's past standard darlings cube",
+    description: "Past Standard Darlings",
     setCode: 'HOG'
   },
   'Zendikar Remastered': {
     id: 'zrr',
-    description: "Hersh's Zendikar Remastered plane cube",
+    description: "The History of Zendikar",
     setCode: 'ZRR'
   },
   'Eldraine Plane Cube': {
     id: 'anacube',
-    description: "Ana's Eldraine plane cube",
+    description: "Welcome to Eldraine",
     setCode: 'AEC'
   },
   'MH2 Set Cube - Remastered': {
     id: 'mh2be',
-    description: "Sam's Modern Horizons 2 set cube",
+    description: "Modern Horizons 2 Remastered",
     setCode: 'M2C'
   },
   'Velocity': {
     id: 'velocity',
-    description: "Kyle's Totally Real cube",
-    setCode: 'KVC'
+    description: "Totally Real Cube",
+    setCode: 'TKC'
   },
 };
 
