@@ -2,6 +2,7 @@ export interface Cube {
   id: string;
   setCode: string;
   description: string;
+  hasDefaultLayout?: boolean; // True if cube uses 3x5 card layout (default: false)
 }
 
 export interface CubeSelection {

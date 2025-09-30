@@ -6,62 +6,74 @@ export const cubes: Record<string, Cube> = {
   'Matica': {
     id: 'matica',
     description: "Modern-ish, buildaround-ish",
-    setCode: 'MTC'
+    setCode: 'MTC',
+    hasDefaultLayout: true
   },
   'Mid': {
     id: 'mid',
     description: "Pioneer mid cards we love",
-    setCode: 'PMC'
+    setCode: 'PMC',
+    hasDefaultLayout: true
   },
   'Cheapo': {
     id: 'cheapo',
     description: "Cheapo Pauper",
-    setCode: 'HCC'
+    setCode: 'HCC',
+    hasDefaultLayout: true
   },
   'Vintage': {
     id: 'Decaluwe',
     description: "Kyle's MODO Vintage",
-    setCode: 'KVC'
+    setCode: 'KVC',
+    hasDefaultLayout: true
   },
   'Duplicity': {
     id: 'dupli',
     description: "Non-singleton artifact factory",
-    setCode: 'DPC'
+    setCode: 'DPC',
+    hasDefaultLayout: true
   },
   'Interstellar': {
     id: 'margus',
     description: "Modern no-banlist sickos",
-    setCode: 'INT'
+    setCode: 'INT',
+    hasDefaultLayout: true
   },
   'Luka': {
     id: 'luka',
     description: "Yeah, we're the cool guys",
-    setCode: 'LKC'
+    setCode: 'LKC',
+    hasDefaultLayout: true
   },
   'Hogwild': {
     id: 'hogwild',
     description: "Past Standard Darlings",
-    setCode: 'HOG'
+    setCode: 'HOG',
+    hasDefaultLayout: true
   },
   'Zendikar Remastered': {
     id: 'zrr',
     description: "The History of Zendikar",
-    setCode: 'ZRR'
+    setCode: 'ZRR',
+    hasDefaultLayout: false
   },
   'Eldraine Plane Cube': {
     id: 'anacube',
     description: "Welcome to Eldraine",
-    setCode: 'AEC'
+    setCode: 'AEC',
+    hasDefaultLayout: true
   },
-  'MH2 Set Cube - Remastered': {
+  'MH2 Remastered': {
     id: 'mh2be',
-    description: "Modern Horizons 2 Remastered",
-    setCode: 'M2C'
+    description: "Modern Horizons 2 Remastered Set Cube",
+    setCode: 'M2C',
+    hasDefaultLayout: true
   },
   'Velocity': {
     id: 'velocity',
     description: "Totally Real Cube",
-    setCode: 'TKC'
+    setCode: 'TKC',
+    hasDefaultLayout: true
   },
 };
 
