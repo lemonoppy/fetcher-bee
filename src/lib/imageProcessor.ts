@@ -141,30 +141,10 @@ export const processPackImage = async (imageUrl: string): Promise<Buffer> => {
     ctx.rect(darkenedArea.x, darkenedArea.y, darkenedArea.width, darkenedArea.height);
     ctx.clip();
 
-    // Apply desaturation and darken effect
-    ctx.globalCompositeOperation = 'multiply';
-    ctx.fillStyle = 'rgba(128, 128, 128, 0.6)'; // Lighter grey overlay
-    ctx.fillRect(darkenedArea.x, darkenedArea.y, darkenedArea.width, darkenedArea.height);
-
-    // Add slight transparency
-    ctx.globalCompositeOperation = 'source-atop';
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Very light darken effect
-    ctx.fillRect(darkenedArea.x, darkenedArea.y, darkenedArea.width, darkenedArea.height);
-
-    // Add diagonal lines for visual distinction (lighter and single direction)
+    // Apply fully opaque black square
     ctx.globalCompositeOperation = 'source-over';
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)'; // Lighter lines
-    ctx.lineWidth = 20;
-
-    const spacing = 8; // Distance between lines
-
-    // Draw diagonal lines from top-left to bottom-right only
-    for (let i = darkenedArea.x - darkenedArea.height; i < darkenedArea.x + darkenedArea.width + darkenedArea.height; i += spacing) {
-      ctx.beginPath();
-      ctx.moveTo(i, darkenedArea.y);
-      ctx.lineTo(i + darkenedArea.height, darkenedArea.y + darkenedArea.height);
-      ctx.stroke();
-    }
+    ctx.fillStyle = 'rgba(0, 0, 0, 1.0)'; // Fully opaque black
+    ctx.fillRect(darkenedArea.x, darkenedArea.y, darkenedArea.width, darkenedArea.height);
 
     ctx.restore();
 

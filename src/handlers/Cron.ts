@@ -69,7 +69,7 @@ module.exports = async (client: Client) => {
         return;
       }
 
-      const { key, cube } = getRandomCube();
+      const { key, cube } = getRandomCube(true);
 
       // Track the cube selection with bot user info
       await trackCubeSelection(

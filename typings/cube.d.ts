@@ -3,6 +3,7 @@ export interface Cube {
   setCode: string;
   description: string;
   hasDefaultLayout?: boolean; // True if cube uses 3x5 card layout (default: false)
+  isSet?: boolean;
 }
 
 export interface CubeSelection {

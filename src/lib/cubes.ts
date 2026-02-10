@@ -55,19 +55,22 @@ export const cubes: Record<string, Cube> = {
     id: 'zrr',
     description: "The History of Zendikar",
     setCode: 'ZRR',
-    hasDefaultLayout: false
+    hasDefaultLayout: false,
+    isSet: true
   },
   'Eldraine Plane Cube': {
     id: 'anacube',
     description: "Welcome to Eldraine",
     setCode: 'AEC',
-    hasDefaultLayout: true
+    hasDefaultLayout: true,
+    isSet: true
   },
   'MH2 Remastered': {
     id: 'mh2be',
     description: "Modern Horizons 2 Remastered Set Cube",
     setCode: 'M2C',
-    hasDefaultLayout: true
+    hasDefaultLayout: true,
+    isSet: true
   },
   'Velocity': {
     id: 'velocity',
@@ -79,13 +82,21 @@ export const cubes: Record<string, Cube> = {
 
 /**
  * Utility function to get a random cube from the cubes object
+ * @param removeSet - If true, excludes set cubes (cubes with isSet: true) from the selection
  * @returns An object containing both the key and cube data
  */
-export const getRandomCube = (): CubeSelection => {
-  const cubeKeys = Object.keys(cubes);
-  const randomKey = cubeKeys[Math.floor(Math.random() * cubeKeys.length)];
-  return { key: randomKey, cube: cubes[randomKey] };
+export const getRandomCube = (removeSet: boolean = false): CubeSelection => {
+  const cubeEntries = Object.entries(cubes);
+  const filteredEntries = removeSet
+    ? cubeEntries.filter(([, cube]) => !cube.isSet)
+    : cubeEntries;
+
+  const randomIndex = Math.floor(Math.random() * filteredEntries.length);
+  const [key, cube] = filteredEntries[randomIndex];
+
+  return { key, cube };
 };
+
 
 /**
  * Get a cube by its key
